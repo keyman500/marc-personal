@@ -113,5 +113,9 @@ height:100px
 
 
 }
-
+.resimg {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
 #top {background-image: url("back.png")}

@@ -20,13 +20,16 @@ var posts = document.getElementById("posts");
 db.collection("posts").get().then(function(querySnapshot) {
     querySnapshot.forEach(function(doc) {
     if(doc.data().img){
-     posts.innerHTML+=` <div class="card">
+        console.log("here: "+ doc.data().title)
+     posts.innerHTML+=` <div class="card" id="${doc.id}">
       <h2>${doc.data().title}</h2>
-      <img src="${doc.data.img}" id="logo"/>
+      <div style="display:flex;">
+      <img src="${doc.data().img}" class="resimg" />
+      </div>
       <p>${doc.data().post}</p>
     </div>`}
     else{
-    posts.innerHTML+=` <div class="card">
+    posts.innerHTML+=` <div class="card" id="${doc.id}">
       <h2>${doc.data().title}</h2> 
       <p>${doc.data().post}</p>
     </div>`
