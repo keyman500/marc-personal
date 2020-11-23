@@ -3,13 +3,17 @@
 <head>
 <link rel="stylesheet" href="index.css">
  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+ <meta name="theme-color" content="black" />
+ <link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" type="image/png" href="./img/favicon.png"/>
+<link rel="icon" type="image/png" href="./img/favicon.png"/>
  <title>jounal</title>
 </head>
 
 <body>
 
 <div class="header" id="top">
-  <h1 style="color:white;">Marc Personal jounal</h1>
+  <h1 style="color:white;">Marc Personal journal</h1>
   <p></p>
 </div>
 
@@ -22,7 +26,22 @@
   <div class="leftcolumn" id="posts">
     <div class="card">
       <h2>Project</h2>
-      <p>Hello my name is Marc hypolite and my ID is 816016509.this a jounal documenting my contribution to our group project for HCI.</p>
+      <p>Hello my name is Marc hypolite and my ID is 816016509.this a journal documenting my contribution to our group project for HCI.</p>
+    </div>
+     <div class="card">
+      <h2>The project idea</h2>
+      <p>The idea too do a hydroponics system for our group project was intially my idea so in the document below I did the chosen solutuion,reserarch,problem statement,sineros and the design direction which was mostly taken from my individual assignment 1</p>
+        <iframe src="/a1.pdf" style="width:100%; height:300px;"></iframe>
+    </div>
+      <div class="card">
+      <h2>Assignment 2 contribution</h2>
+      <p>The group had decided that since I had orginally come up with the project idea that i should be the one too expand on it in assignment two.So I wrote the project idea nd stakeholders and users part of this assignment shown below</p>
+        <iframe src="/a2.pdf" style="width:100%; height:300px;"></iframe>
+    </div>
+       <div class="card">
+      <h2>My herustic evalulation</h2>
+      <p>The pdf below shows my herustic evaluation.</p>
+        <iframe src="/herustic.pdf" style="width:100%; height:300px;"></iframe>
     </div>
   </div>
   <div class="rightcolumn">
@@ -31,6 +50,7 @@
       <p>Our group's project is too build an andriod application that can be used too control a hydroponics system</p>
       <a href="https://hci-group-website-f470f.web.app">group website</a>
     </div>
+    
   </div>
 </div>
 
@@ -45,5 +65,15 @@
 
 <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
 <script src="index.js"></script>
+<script>
+// Check that service workers are supported
+if ('serviceWorker' in navigator) {
+  // Use the window load event to keep the page load performant
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js');
+  });
+}
+</script>
+
 </body>
 </html>

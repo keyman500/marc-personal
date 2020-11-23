@@ -1,0 +1,22 @@
+{
+  "short_name": "Marc-personal",
+  "name": "Marc personal journal",
+  "description": "A journal for HCI course progress",
+  "icons": [
+    {
+      "src": "/s-icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/j-icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#3367D6",
+  "display": "fullscreen",
+  "scope": "/index.html",
+  "theme_color": "#3367D6"
+}

@@ -1,6 +1,5 @@
 var obj = {};
-var title = document.getElementById("title");
-var post = document.getElementById("post");
+
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   var firebaseConfig = {
@@ -43,9 +42,11 @@ var db = firebase.firestore();
 db.collection("posts").doc().set(obj)
 .then(function() {
     console.log("Document successfully written!");
+    alert("data sent");
 })
 .catch(function(error) {
     console.error("Error writing document: ", error);
+    alert("data not sent")
 });
 
 }
